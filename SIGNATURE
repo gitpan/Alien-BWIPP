@@ -1,0 +1,35 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.61.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 eeea3455c8ae0efecc06246aeb0958b4777053b9 AUTHORS
+SHA1 5df4a1079b28eeec7660816a8493ae8ff2a41c4d Build.PL
+SHA1 8ce7373df54f5cfb0a3f580e9984fa5d9b10dc90 Changes
+SHA1 2efd64b5c8ad96d032cfd3010420a2ac2c06e4a6 MANIFEST
+SHA1 6bec347e8c5b2f364c6a22b120efe7aa9a6143ae MANIFEST.SKIP
+SHA1 2d8c47c294a6f2a05e3bbcd959edcf7f003c941f META.yml
+SHA1 be25b6ef659bca941fedc7b6c155d6c4b0b9ce77 README
+SHA1 3eaaf6a301d5b34ebc0109f874d66396d3ad1227 lib/Alien/BWIPP.pm
+SHA1 1aba56f7312b270c21d5a31b48550de78e67ba14 share/barcode.ps
+SHA1 ef00330634fa80ccba64d10a7363bbf15e7703e2 t/00-load.t
+SHA1 c65cd0e73eb625650ab125f8c1cdb7840be65459 t/10-generated-class.t
+SHA1 29cc7bb905a8b910527053367d7ac62ed0583c89 t/10-interface.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.12 (GNU/Linux)
+
+iEYEARECAAYFAksdYJ0ACgkQFtlTdOX00Ho4XQCeJjPs0B8YNdTNriWo2lxHgP6h
+w0QAnjrCkdkwh7KkVn+QiTpDjHk8+KpO
+=akgI
+-----END PGP SIGNATURE-----

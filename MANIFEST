@@ -1,0 +1,13 @@
+AUTHORS
+Build.PL
+Changes
+lib/Alien/BWIPP.pm
+MANIFEST			This list of files
+MANIFEST.SKIP
+README
+share/barcode.ps
+t/00-load.t
+t/10-generated-class.t
+t/10-interface.t
+META.yml
+SIGNATURE    Added here by Module::Build
