@@ -16,7 +16,7 @@ name: Alien-BWIPP
 provides:
   Alien::BWIPP:
     file: lib/Alien/BWIPP.pm
-    version: 0.002
+    version: 0.003
 requires:
   English: 1.04
   File::ShareDir: 1.01
@@ -30,4 +30,4 @@ resources:
   bugtracker: http://github.com/daxim/Alien-BWIPP/issues
   license: http://www.opensource.org/licenses/mit-license.php
   repository: http://github.com/daxim/Alien-BWIPP
-version: 0.002
+version: 0.003
