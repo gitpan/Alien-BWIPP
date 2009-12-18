@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: 0
 configure_requires:
-  Module::Build: 0.35_02
+  Module::Build: 0.35_14
   perl: 5.010
-generated_by: 'Module::Build version 0.3513'
+generated_by: 'Module::Build version 0.3515'
 license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -16,7 +16,7 @@ name: Alien-BWIPP
 provides:
   Alien::BWIPP:
     file: lib/Alien/BWIPP.pm
-    version: 0.003
+    version: 0.004
 requires:
   English: 1.04
   File::ShareDir: 1.01
@@ -30,4 +30,4 @@ resources:
   bugtracker: http://github.com/daxim/Alien-BWIPP/issues
   license: http://www.opensource.org/licenses/mit-license.php
   repository: http://github.com/daxim/Alien-BWIPP
-version: 0.003
+version: 0.004
