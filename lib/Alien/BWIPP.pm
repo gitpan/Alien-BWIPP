@@ -11,7 +11,7 @@ use Moose qw(has);
 use MooseX::ClassAttribute qw(class_has);
 use Storable qw(dclone);
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 has 'barcode_source_handle' => (
     is      => 'rw',
@@ -36,18 +36,19 @@ sub _build__chunks {
     my %chunks;
     {
         while (defined(my $line = $self->barcode_source_handle->getline)) {
-            state ($block_type, $block_name, $in_begin);
+            state ($block_type, $block_name);
+            state $in_begin = '';
             $in_begin = $line if $in_begin;
 # $in_begin is a work-around because the flip..flop operator does not work
 # correctly in given/when under 5.10.0. This has been fixed for 5.10.1.
             given ($line) {
                 when (/\A %[ ]--BEGIN[ ](?<type>(?:RENDER|ENCOD)ER)[ ](?<name>\w+)--/msx) {
-                    $in_begin = 1;
+                    $in_begin = !!1;
                     $block_type = $LAST_PAREN_MATCH{type} if $LAST_PAREN_MATCH{type};
                     $block_name = $LAST_PAREN_MATCH{name} if $LAST_PAREN_MATCH{name};
                 }
                 when (/\A %[ ]--END  [ ]        (?:RENDER|ENCOD)ER/msx) {
-                    $in_begin = 0;
+                    $in_begin = '';
                 }
                 when ($in_begin) {
                     $chunks{$block_type}{$block_name}{post_script_source_code} .= $line;
@@ -152,7 +153,7 @@ Alien::BWIPP - Barcode Writer in Pure PostScript
 
 =head1 VERSION
 
-This document describes C<Alien::BWIPP> version C<0.004>. It is based on
+This document describes C<Alien::BWIPP> version C<0.005>. It is based on
 I<Barcode Writer in Pure PostScript> version C<2009-11-15>.
 
 
